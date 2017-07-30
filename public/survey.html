@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Hot Restaurant</title>
+  <!-- Latest compiled and minified CSS & JS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="https://code.jquery.com/jquery.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+</head>
+<body>
+
+  <div class="container">
+    <div class="jumbotron">
+      <h1>Survey Questions</h1>
+      <h3>Name</h3>
+      <input type="text" id="name" class="form-control">
+      <h3>Link to Photo Image</h3>
+      <input type="text" id="photo" class="form-control">  
+    </div>
+  </div>
+
+  <hr>
+
+  <div class="question" id="q1">
+    <h3><strong>Question 1</strong></h3>
+    <h4>Cats</h4>
+      <select>
+        <option value='1'>1 - Disagree</option>
+        <option value='2'>2</option>
+        <option value='3'>3 - Undecided</option>
+        <option value='4'>4</option>
+        <option value='5'>5 - Agree</option>
+      </select>
+  </div>
+
+  <div class="question" id="q2">
+    <h3><strong>Question 2</strong></h3>
+    <h4>Cats</h4>
+      <select>
+        <option value='1'>1 - Disagree</option>
+        <option value='2'>2</option>
+        <option value='3'>3 - Undecided</option>
+        <option value='4'>4</option>
+        <option value='5'>5 - Agree</option>
+      </select>
+  </div>
+
+  <div class="question" id="q3">
+    <h3><strong>Question 3</strong></h3>
+    <h4>Cats</h4>
+      <select>
+        <option value='1'>1 - Disagree</option>
+        <option value='2'>2</option>
+        <option value='3'>3 - Undecided</option>
+        <option value='4'>4</option>
+        <option value='5'>5 - Agree</option>
+      </select>
+  </div>
+
+  <div class="question" id="q4">
+    <h3><strong>Question 4</strong></h3>
+    <h4>Cats</h4>
+      <select>
+        <option value='1'>1 - Disagree</option>
+        <option value='2'>2</option>
+        <option value='3'>3 - Undecided</option>
+        <option value='4'>4</option>
+        <option value='5'>5 - Agree</option>
+      </select>
+  </div>
+
+  <div class="question" id="q5">
+    <h3><strong>Question 5</strong></h3>
+    <h4>Cats</h4>
+      <select>
+        <option value='1'>1 - Disagree</option>
+        <option value='2'>2</option>
+        <option value='3'>3 - Undecided</option>
+        <option value='4'>4</option>
+        <option value='5'>5 - Agree</option>
+      </select>
+  </div>
+
+  <div class="question" id="q6">
+    <h3><strong>Question 6</strong></h3>
+    <h4>Cats</h4>
+      <select>
+        <option value='1'>1 - Disagree</option>
+        <option value='2'>2</option>
+        <option value='3'>3 - Undecided</option>
+        <option value='4'>4</option>
+        <option value='5'>5 - Agree</option>
+      </select>
+  </div>
+
+  <div class="question" id="q7">
+    <h3><strong>Question 7</strong></h3>
+    <h4>Cats</h4>
+      <select>
+        <option value='1'>1 - Disagree</option>
+        <option value='2'>2</option>
+        <option value='3'>3 - Undecided</option>
+        <option value='4'>4</option>
+        <option value='5'>5 - Agree</option>
+      </select>
+  </div>
+
+  <div class="question" id="q8">
+    <h3><strong>Question 8</strong></h3>
+    <h4>Cats</h4>
+      <select>
+        <option value='1'>1 - Disagree</option>
+        <option value='2'>2</option>
+        <option value='3'>3 - Undecided</option>
+        <option value='4'>4</option>
+        <option value='5'>5 - Agree</option>
+      </select>
+  </div>
+
+  <div class="question" id="q9">
+    <h3><strong>Question 9</strong></h3>
+    <h4>Cats</h4>
+      <select>
+        <option value='1'>1 - Disagree</option>
+        <option value='2'>2</option>
+        <option value='3'>3 - Undecided</option>
+        <option value='4'>4</option>
+        <option value='5'>5 - Agree</option>
+      </select>
+  </div>
+
+  <div class="question" id="q10">
+    <h3><strong>Question 10</strong></h3>
+    <h4>Cats</h4>
+      <select class="chosen-select">
+        <option value='1'>1 - Disagree</option>
+        <option value='2'>2</option>
+        <option value='3'>3 - Undecided</option>
+        <option value='4'>4</option>
+        <option value='5'>5 - Agree</option>
+      </select>
+  </div>
+
+  <button type="submit" id="addFriend" class="btn btn-primary btn-lg btn-block">Submit</button>
+
+    
+
+    <a href = "/api/tables" class = "buttomLinks">Tables API</a>
+  
+    <a href = "/api/waiting" class = "buttomLinks">Waiting API</a>
+  
+
+    
+
+<script type="text/javascript">
+    
+    $("#addFriend").on("click", function(event) {
+      var results = [];
+      $(".question select").each(function(){
+        var points = $(this).val();
+        results.push(points);
+      });
+
+        var newSubject = {
+        name: $("#name").val().trim(),
+        photo: $("#photo").val().trim(),
+        results: results
+      };
+    console.log(results);
+    console.log(newSubject);
+    });
+
+  
+  </script>
+
+  <style>
+  .buttomLinks{
+    text-decoration: underline;
+  }
+
+  </style>
+</body>
+</html>

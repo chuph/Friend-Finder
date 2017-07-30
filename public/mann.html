@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Hot Restaurant</title>
+    <!-- Latest compiled and minified CSS & JS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <title>Survey</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="jumbotron">
+            <h1>Survey Questions</h1>
+            <h2>About You</h2>
+            <h3>Name (Required)</h3>
+            <input type="text" id="userName">
+            <h3>Link to Photo Image (Required)</h3>
+            <input type="text" id="userPhoto">
+        </div>
+    </div>
+
+    <div class="question" id="q1">
+      <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3>You find it difficult to introduce yourself to other people.</h3>
+            <select>
+                <option value='1'>1 - Agree</option>
+                <option value='2'>2</option>
+                <option value='3'>3</option>
+                <option value='4'>4</option>
+                <option value='5'>5 - Disagree</option>
+            </select>
+          </div>
+      </div>
+    </div>
+
+    <div class="question" id="q2">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3>You often get so lost in thoughts that you ignore or forget your surroundings.</h3>
+                <select>
+                    <option value='1'>1 - Agree</option>
+                    <option value='2'>2</option>
+                    <option value='3'>3</option>
+                    <option value='4'>4</option>
+                    <option value='5'>5 - Disagree</option>
+                </select>
+            </div>
+        </div>
+    </div>
+
+    <div class="question" id="q3">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3>You try to respond to your e-mails as soon as possible and cannot stand a messy inbox.</h3>
+                <select>
+                    <option value='1'>1 - Agree</option>
+                    <option value='2'>2</option>
+                    <option value='3'>3</option>
+                    <option value='4'>4</option>
+                    <option value='5'>5 - Disagree</option>
+                </select>
+            </div>
+        </div>
+    </div>
+
+    <div class="question" id="q4">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3>You find it easy to stay relaxed and focused even when there is some pressure.</h3>
+                <select>
+                    <option value='1'>1 - Agree</option>
+                    <option value='2'>2</option>
+                    <option value='3'>3</option>
+                    <option value='4'>4</option>
+                    <option value='5'>5 - Disagree</option>
+                </select>
+            </div>
+        </div>
+    </div>
+
+    <div class="question" id="q5">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3>You do not usually initiate conversations.</h3>
+                <select>
+                    <option value='1'>1 - Agree</option>
+                    <option value='2'>2</option>
+                    <option value='3'>3</option>
+                    <option value='4'>4</option>
+                    <option value='5'>5 - Disagree</option>
+                </select>
+            </div>
+        </div>
+    </div>
+
+    <div class="question" id="q6">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3>You rarely do something just out of sheer curiosity.</h3>
+                <select>
+                    <option value='1'>1 - Agree</option>
+                    <option value='2'>2</option>
+                    <option value='3'>3</option>
+                    <option value='4'>4</option>
+                    <option value='5'>5 - Disagree</option>
+                </select>
+            </div>
+        </div>
+    </div>
+
+    <div class="question" id="q7">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3>Do you like music?</h3>
+                <select>
+                    <option value='1'>1</option>
+                    <option value='2'>2</option>
+                    <option value='3'>3</option>
+                    <option value='4'>4</option>
+                    <option value='5'>5</option>
+                </select>
+            </div>
+        </div>
+    </div>
+
+    <div class="question" id="q8">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3>Do you like music?</h3>
+                <select>
+                    <option value='1'>1</option>
+                    <option value='2'>2</option>
+                    <option value='3'>3</option>
+                    <option value='4'>4</option>
+                    <option value='5'>5</option>
+                </select>
+            </div>
+        </div>
+    </div>
+
+    <div class="question" id="q9">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3>Do you like music?</h3>
+                <select>
+                    <option value='1'>1</option>
+                    <option value='2'>2</option>
+                    <option value='3'>3</option>
+                    <option value='4'>4</option>
+                    <option value='5'>5</option>
+                </select>
+            </div>
+        </div>
+    </div>
+
+    <div class="question" id="q10">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3>Do you like music?</h3>
+                <select>
+                    <option value='1'>1</option>
+                    <option value='2'>2</option>
+                    <option value='3'>3</option>
+                    <option value='4'>4</option>
+                    <option value='5'>5</option>
+                </select>
+            </div>
+        </div>
+    </div>
+
+    <input type="submit" value="Submit" id="add-user" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+
+    <div id="linkContainer">
+      <a href="/api/friends">API Friends List</a>
+      <span>|</span>
+      <a href="https://github.com/publius2016/friendfinder">GitHub Repo</a>
+    </div>
+
+    <!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Your best match is...</h4>
+      </div>
+      <div class="modal-body">
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<script type="text/javascript">
+    $("#add-user").on("click", function(event) {
+        event.preventDefault();
+        var surveyVal = [];
+        $(".question select").each(function(index) {
+            var value = $(this).val();
+            surveyVal.push(value);
+        });
+        // console.log(surveyVal);
+        var newUser = {
+            name: $("#userName").val().trim(),
+            photo: $("#userPhoto").val().trim(),
+            survey: surveyVal
+        };
+        console.log(newUser);
+        console.log(typeof newUser)
+        $.post("/api/new", newUser).done(function(data) {
+                console.log(data);
+                var matchImg = $("<img>");
+                matchImg.attr('src', data.photo);
+                $(".modal-body").empty();
+                $(".modal-body").html("<h1>" + data.name + "</h1>");
+                $(".modal-body").append(matchImg);
+        }); // END POST
+    }); // END CLICK ON SUBMIT
+</script>
+
+</body>
+
+</html>
